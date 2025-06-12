@@ -2,7 +2,8 @@ import webbrowser
 import random
 import datetime
 
-LOG_FILE = "MagicPython_log.txt"
+
+
 
 print("Welcome to lynnxx's magic 8 program!")
 print("Named after the magic 8 ball toy of yesteryear, MagicPython will answer any yes/no question you ask!")
@@ -25,7 +26,7 @@ while True:
   break
  timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
- rickroll = random.randint(1,10)
+ rickroll = random.randint(1,150)
 
  if (rickroll <= 2):
   webbrowser.open("https://www.youtube.com/watch?v=3BFTio5296w")
@@ -33,8 +34,7 @@ while True:
   answer = random.choice(responses)
   print(answer)
 
- with open(LOG_FILE, "a") as file:
-   file.write(f"Timestamp: {timestamp}\nUser: {usr_nme}\nQuestion: {question}\nAnswer: {answer}\n---\n")
+
 
  again = input("Would you like to ask another question? Yes/No: ").strip().lower()
  if again not in ["yes", "y"]:
